@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Лабараторна 4</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <ul class="navbar">
+            <li class="nav-item">
+              <a href="#" id="registrationLink" class="nav-link">Регістрація</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" id="tabulationLink" class="nav-link"
+                >Математичні завдання</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" id="editLink" class="nav-link">Користувач</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="registrationForm">
+        <form action="" method="post" class="registerForm">
+          <div class="container">
+            <h2>Регістрація</h2>
+            <div>
+              <label for="username">Ім'я користувача</label>
+              <br />
+              <input
+                type="text"
+                class="register-form-input"
+                name="username"
+                id="username"
+              />
+              <span class="error" id="usernameSpanErr"></span>
+            </div>
+            <br />
+
+            <div>
+              <label for="email">Емаїл</label>
+              <br />
+              <input
+                type="email"
+                class="register-form-input"
+                name="email"
+                id="email"
+              />
+              <span class="error" id="emailSpanErr"></span>
+            </div>
+            <br />
+
+            <div>
+              <label for="password">Пароль</label>
+              <br />
+              <input
+                type="password"
+                class="register-form-input"
+                name="password"
+                id="password"
+              />
+              <span class="error" id="passwordSpanErr"></span>
+            </div>
+            <br />
+
+            <button type="button" id="submitButton" class="submitButton">
+              Зареєструватись
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="tabulationForm">
+        <div class="tabulationForm__inner">
+          <div class="container container-task">
+            <h2>Завдання 2</h2>
+            <table border="1" id="tabulationTable">
+              <tr>
+                <th>X</th>
+                <th>Y</th>
+              </tr>
+            </table>
+          </div>
+          <form action="">
+            <div class="container container-task container-task-1">
+              <h2>Завдання 1</h2>
+              <label for="number1">X:</label>
+              <input
+                type="number"
+                min="-1000"
+                max="1000"
+                class="register-form-input numberOnly"
+                name="number1"
+                id="number1"
+              />
+              <label for="number2">Y:</label>
+              <input
+                type="number"
+                min="-1000"
+                max="1000"
+                class="register-form-input numberOnly"
+                name="number2"
+                id="number2"
+              />
+              <button type="button" id="calculateButton" class="submitButton">
+                Підрахувати
+              </button>
+            </div>
+          </form>
+          <div class="container container-task">
+            <h2>Завдання 3</h2>
+            <table
+              border="1"
+              id="hardTabulationTable"
+              style="margin-left: 20px"
+            >
+              <tr>
+                <th>X</th>
+                <th>Y</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="editForm">
+        <form action="" method="post" class="registerForm">
+          <div class="container">
+            <h2>User form</h2>
+            <div>
+              <label for="editUsername">Ім'я користувача</label>
+              <br />
+              <input
+                type="text"
+                class="register-form-input"
+                name="editUsername"
+                id="editUsername"
+              />
+              <span class="error" id="editUsernameSpanErr"></span>
+            </div>
+            <br />
+
+            <div>
+              <label for="editEmail">Емаїл</label>
+              <br />
+              <input
+                type="email"
+                class="register-form-input"
+                name="editEmail"
+                id="editEmail"
+              />
+              <span class="error" id="editEmailSpanErr"></span>
+            </div>
+            <br />
+
+            <div>
+              <label for="editPassword">Пароль</label>
+              <br />
+              <input
+                type="password"
+                class="register-form-input"
+                name="editPassword"
+                id="editPassword"
+              />
+              <span class="error" id="editPasswordSpanErr"></span>
+            </div>
+            <br />
+
+            <button type="button" id="editButton" class="submitButton">
+              Редагувати
+            </button>
+            <button type="button" id="logoutButton" class="submitButton">
+              Вийти
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/registration.js" type="module"></script>
+    <script src="js/calculations.js"></script>
+  </body>
+</html>
